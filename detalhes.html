@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Simulador</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
+
+</head>
+
+<body class="bgform">
+
+    <header class="header">
+        <div class="pull-left p-3">
+            <a href="#">
+                <b>Logo</b>
+            </a>
+        </div>
+
+        <!-- start: search & user box -->
+        <div class="pull-right">
+
+            <div class="profile-info p-2">
+                <a href="#"><i class="fa fa-power-off" aria-hidden="true"></i>
+                    Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="full">
+        <a href="#">
+            <i class="fas fa-home fontcolor pull-left" aria-hidden="true"></i>
+            <span class="spandiv">Home</span>
+        </a>
+        <div class="col-md-1 pull-left padd0 fixed zi" style="margin-top: 50px">
+            <div class="navh1">
+                <ul class="nav ">
+                    <li>
+                        <a href="home.html">
+                            <i class="fa fa-home fontcolor pull-left" aria-hidden="true"></i>
+                            <span class="spandiv fontcolor">Página Inicial</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="simulacao.html">
+                            <i class="fa fa-bookmark fontcolor pull-left" aria-hidden="true"></i>
+                            <span class="spandiv fontcolor">Simulação</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="new.html">
+                            <i class="fas fa-plus fontcolor pull-left" aria-hidden="true"></i>
+                            <span class="spandiv fontcolor">Nova Simulação</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!--  End header	 -->
+
+
+        <!--  Body Form Strat	 -->
+        <header class="page-header border fixed w100" style="border:none !important">
+            <i class="fa fa-bars fontcolor pull-left navbgclr pointer" style="padding-right:36px" aria-hidden="true"
+                onclick="shownav()"></i>
+            <h4>Simulador</h4>
+        </header>
+
+        <div class="col-md-11 pull-right padd0 mt-5 res-mgtop ">
+            <div class="container-fluid mt-4 pr-5 res-pad">
+                <div class="row">
+                    <div class="col-md-12 padd0 mt-2 pb-4">
+
+                        <div class="text-left p-3 bgcolor">
+                            <h5 class="panel-title col-b">Detalhes Simulação 1</h5>
+                        </div>
+
+                        <div class="panel-body p-3">
+                            <div class="row ">
+                                <div class="col-md-12 table-responsive">
+                                    <form id="form" method="POST" enctype="multipart/form-data" class="form-vertical">
+
+                                        
+            
+                                        <div class="panel-body">
+                                            <div class="form-row p-3">
+                                                <div class=" col-sm-12">
+                                                    <label class=" control-label">Diretório com os arquivos do OpenDSS <span
+                                                        class="required">*</span></label>
+                                                    <input type="text" name="page_name" class="form-control" placeholder="Caminho de todos os arquivos do OpenDSS (.dss)."
+                                                        value="" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-row p-3">
+                                                <div class=" col-sm-12">
+                                                    <label class=" control-label">Caminho do arquivo com as coordenadas das barras <span class="required">*</span></label>
+                                                    <input type="text" name="title" class="form-control" placeholder="Caminho do arquivo que contém as coordenadas xy das barras consideradas relevantes para o estudo."
+                                                        value="" required />
+                                                </div>
+                                            </div>
+                                            <div class="form-row p-3">
+                                                <div class=" col-sm-12">
+                                                    <label class=" control-label">Caminho do arquivo de extensão .dss que contém as informações de conexão das linhas <span class="required">*</span></label>
+                                                    <input type="text" name="seo" class="form-control" placeholder="Caminho do arquivo que contém as informações de cada conexão do sistema." value=""
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="form-row p-3">
+                                                <div class=" col-sm-12">
+                                                    <label class=" control-label">Caminho do arquivo com as curvas de cargas <span class="required">*</span></label>
+                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os pontos de cada curva de carga do sistema." value=""
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="form-row p-3">
+                                                <div class=" col-sm-12">
+                                                    <label class=" control-label">Caminho do arquivo txt com o nome das curvas informadas no arquivo csv <span class="required">*</span></label>
+                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo, cujo caminho foi informado, contém os nomes das curvas de cargas que estão sendo informadas no arquivo csv, na ordem em que aparecem no arquivo." value=""
+                                                        required />
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                        <div class=" row">
+                                            <button class="btn btn-primary btn-sm col-sm-4">Baixar PDF</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </section>
+                        <!-- end: Listing Records -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--  Body Form End	 -->
+
+    </div>
+
+    <!-- Footer Section Script and CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        type="text/css" media="all">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Footer Section Script and CSS -->
+    <script type="text/javascript">
+        function shownav() {
+            $('.navh1').toggle();
+        }
+
+        $('#addForm').click(function () {
+            $('#addRecord').slideToggle();
+            $('#addForm').hide();
+        });
+
+    </script>
+</body>
+
+</html>
