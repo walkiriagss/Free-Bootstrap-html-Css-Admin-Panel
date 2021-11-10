@@ -85,52 +85,298 @@
                             <div class="row ">
                                 <div class="col-md-12 table-responsive">
                                     <form id="form" method="POST" enctype="multipart/form-data" class="form-vertical">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="card">
+                                              <div class="card-header" id="headingOne">
+                                                <h5 class="mb-0">
+                                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Informações sobre o sistema OpenDSS  <i class="fas fa-chevron-down"></i>
+                                                  </button>
+                                                </h5>
+                                              </div>
+                                          
+                                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <div class="panel-body">
+                                                        <div class="form-row p-3">
+                                                            <div class=" col-sm-12">
+                                                                <label class=" control-label">Diretório com os arquivos do OpenDSS <span
+                                                                    class="required">*</span></label>
+                                                                <input type="text" name="page_name" class="form-control" placeholder="Caminho de todos os arquivos do OpenDSS (.dss)." id="validationDefault02" value="" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row p-3">
+                                                            <div class=" col-sm-12">
+                                                                <label class=" control-label">Caminho do arquivo com as coordenadas das barras <span class="required">*</span></label>
+                                                                <input type="text" name="title" class="form-control" placeholder="Caminho do arquivo que contém as coordenadas xy das barras consideradas relevantes para o estudo."
+                                                                    value="" required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row p-3">
+                                                            <div class=" col-sm-12">
+                                                                <label class=" control-label">Caminho do arquivo de extensão .dss que contém as informações de conexão das linhas <span class="required">*</span></label>
+                                                                <input type="text" name="seo" class="form-control" placeholder="Caminho do arquivo que contém as informações de cada conexão do sistema." value=""
+                                                                    required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row p-3">
+                                                            <div class=" col-sm-12">
+                                                                <label class=" control-label">Caminho do arquivo com as curvas de cargas <span class="required">*</span></label>
+                                                                <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os pontos de cada curva de carga do sistema." value=""
+                                                                    required />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-row p-3">
+                                                            <div class=" col-sm-12">
+                                                                <label class=" control-label">Caminho do arquivo txt com o nome das curvas informadas no arquivo csv <span class="required">*</span></label>
+                                                                <input type="text" name="seo" class="form-control" placeholder="O arquivo, cujo caminho foi informado, contém os nomes das curvas de cargas que estão sendo informadas no arquivo csv, na ordem em que aparecem no arquivo." value=""
+                                                                    required />
+                                                            </div>
+                                                        </div>
+                        
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="card">
+                                              <div class="card-header" id="headingTwo">
+                                                <h5 class="mb-0">
+                                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Informações sobre os REDs disponíveis <i class="fas fa-chevron-down"></i>
+                                                  </button>
+                                                </h5>
+                                              </div>
+                                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <div>
+                                                        <label>PV</label>
+                                                        <input type="checkbox" name="a" value="1">
+                                                        <div style="display:none">
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número de usinas PV: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com o nome das barras cujas curvas de irradiância são fornecidas <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que são conhecidas as curvas de irradiância solar" value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com a irradiância das barras definidas no arquivo anterior:  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Curvas de irradiância das barras fornecidas no arquivo anterior" value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <label style="margin-left:20px">Potência PV Discreta/Continua</label>
+                                                            <input type="checkbox" name="a" value="1">
+                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as informações de potência da usina PV:  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência de pico disponível para a usina PV" value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider" style="margin-bottom: 10px"></div>
+                                                    <div>
+                                                        <label>Eólica</label>
+                                                        <input type="checkbox" name="a" value="1">
+                                                        
+                                                        <div style="display:none">
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número de usinas eólicas: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com o nome das barras cujas curvas de vento são fornecidas: <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que são conhecidas as curvas de velocidade de vento incidente." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as velocidades de vento nas regiões das barras definidas no arquivo anterior  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Curvas de velocidade de vento das barras fornecidas no arquivo anterior" value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Potência Nominal da Turbina: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número máximo de Turbinas: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número mínimo de Turbinas: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider" style="margin-bottom: 10px"></div>
+                                                    <div>
+                                                        <label>Bateria</label>
+                                                        <input type="checkbox" name="a" value="1">
+                                                        
+                                                        <div style="display:none">
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número de bancos de bateria: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com o nome das barras de interesse para alocação da bateria: <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que o usuário tem interesse em alocar as baterias." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <label style="margin-left:20px">Potência Discreta/Continua</label>
+                                                            <input type="checkbox" name="a" value="1">
+                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com a curva de carga/descarga de cada bateria:  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém as curvas de cargas de cada bateria que será alocada no sistema." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <label style="margin-left:20px">Potência Discreta/Continua</label>
+                                                            <input type="checkbox" name="a" value="1">
+                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as informações de potência nominal (primeira coluna) e capacidade de carga (segunda coluna):  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência e carga disponíveis para a bateria." value=""
+                                                                        required />
+                                                                </div>
+                                                                <div class="form-row p-3" >
+                                                                    <div class="form-group row ">
+                                                                        <label class=" col-sm-6 col-form-label">Capacidade da bateria: <span class="required">*</span></label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown-divider" style="margin-bottom: 10px"></div>
+                                                    <div>
+                                                        <label>Gerador Despachável</label>
+                                                        <input type="checkbox" name="a" value="1">
+                                                        
+                                                        <div style="display:none">
+                                                            
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com o nome das barras de interesse para alocação do gerador: <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que o usuário tem interesse em alocar geradores despacháveis." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class="form-group row ">
+                                                                    <label class=" col-sm-6 col-form-label">Número de geradores despacháveis: <span class="required">*</span></label>
+                                                                    <div class="col-sm-6">
+                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <label style="margin-left:20px">Curva Otimizada/Manual</label>
+                                                            <input type="checkbox" name="a" value="1">
+                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as curvas de geração de cada gerador que será alocado <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém as curvas de carga de cada gerador que será alocado no sistema." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                            <label style="margin-left:20px">Potência Discreta-Contínua</label>
+                                                            <input type="checkbox" name="a" value="1">
+                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as informações de potência disponíveis para os geradores:  <span class="required">*</span></label>
+                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência nominal disponível para o gerador despachável." value=""
+                                                                        required />
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                </div>
+
+                                              </div>
+                                            </div>
+                                            <div class="card">
+                                              <div class="card-header" id="headingThree">
+                                                <h5 class="mb-0">
+                                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Informações sobre a otimização <i class="fas fa-chevron-down"></i>
+                                                  </button>
+                                                </h5>
+                                              </div>
+                                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                <div class="card-body">
+                                                    <div class="form-group row ">
+                                                        <label class=" col-sm-3 col-form-label">Número de indivíduos: <span class="required">*</span></label>
+                                                        <div class="col-sm-6">
+                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class=" col-sm-3 col-form-label">Tempo máximo de execução [s]: <span class="required">*</span></label>
+                                                        <div class="col-sm-6">
+                                                            <input type="number" name="seo" class="form-control" placeholder="1,5" value="" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class=" col-sm-3 col-form-label">Número máximo de iterações: <span class="required">*</span></label>
+                                                        <div class="col-sm-6">
+                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class=" col-sm-3 col-form-label">Número máximo de estagnações: <span class="required">*</span></label>
+                                                        <div class="col-sm-6">
+                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                         
-            
-                                        <div class="panel-body">
-                                            <div class="form-row p-3">
-                                                <div class=" col-sm-12">
-                                                    <label class=" control-label">Diretório com os arquivos do OpenDSS <span
-                                                        class="required">*</span></label>
-                                                    <input type="text" name="page_name" class="form-control" placeholder="Caminho de todos os arquivos do OpenDSS (.dss)."
-                                                        value="" required />
-                                                </div>
-                                            </div>
-                                            <div class="form-row p-3">
-                                                <div class=" col-sm-12">
-                                                    <label class=" control-label">Caminho do arquivo com as coordenadas das barras <span class="required">*</span></label>
-                                                    <input type="text" name="title" class="form-control" placeholder="Caminho do arquivo que contém as coordenadas xy das barras consideradas relevantes para o estudo."
-                                                        value="" required />
-                                                </div>
-                                            </div>
-                                            <div class="form-row p-3">
-                                                <div class=" col-sm-12">
-                                                    <label class=" control-label">Caminho do arquivo de extensão .dss que contém as informações de conexão das linhas <span class="required">*</span></label>
-                                                    <input type="text" name="seo" class="form-control" placeholder="Caminho do arquivo que contém as informações de cada conexão do sistema." value=""
-                                                        required />
-                                                </div>
-                                            </div>
-                                            <div class="form-row p-3">
-                                                <div class=" col-sm-12">
-                                                    <label class=" control-label">Caminho do arquivo com as curvas de cargas <span class="required">*</span></label>
-                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os pontos de cada curva de carga do sistema." value=""
-                                                        required />
-                                                </div>
-                                            </div>
-                                            <div class="form-row p-3">
-                                                <div class=" col-sm-12">
-                                                    <label class=" control-label">Caminho do arquivo txt com o nome das curvas informadas no arquivo csv <span class="required">*</span></label>
-                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo, cujo caminho foi informado, contém os nomes das curvas de cargas que estão sendo informadas no arquivo csv, na ordem em que aparecem no arquivo." value=""
-                                                        required />
-                                                </div>
-                                            </div>
-            
-                                        </div>
                                         <div class=" row">
                                             <button type="reset" class="btn btn-danger btn-sm col-sm-4">Cancelar</button>
                                             <button class="btn btn-default btn-sm col-sm-3">Limpar</button>
-                                            <button class="btn btn-primary btn-sm col-sm-4">Otimizar</button>
+                                            <button class="btn btn-primary btn-sm col-sm-4" type="submit">Otimizar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -163,6 +409,14 @@
             $('#addForm').hide();
         });
 
+    </script>
+    <script>
+
+        $('[name="a"]').on('change', function(){
+            $('[name="a"]:not(:checked)').next('div').hide();
+            $('[name="a"]:checked').next('div').show();
+        }).change()
+    
     </script>
 </body>
 
