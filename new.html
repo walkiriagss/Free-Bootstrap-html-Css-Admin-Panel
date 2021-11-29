@@ -102,35 +102,31 @@
                                                             <div class=" col-sm-12">
                                                                 <label class=" control-label">Diretório com os arquivos do OpenDSS <span
                                                                     class="required">*</span></label>
-                                                                <input type="text" name="page_name" class="form-control" placeholder="Caminho de todos os arquivos do OpenDSS (.dss)." id="validationDefault02" value="" required />
+                                                                    <input type="file" name="diretorio" class="form-control" aria-label="Coordenadas Barras" required>
                                                             </div>
                                                         </div>
                                                         <div class="form-row p-3">
                                                             <div class=" col-sm-12">
                                                                 <label class=" control-label">Caminho do arquivo com as coordenadas das barras <span class="required">*</span></label>
-                                                                <input type="text" name="title" class="form-control" placeholder="Caminho do arquivo que contém as coordenadas xy das barras consideradas relevantes para o estudo."
-                                                                    value="" required />
+                                                                <input type="file" name="coordBarras" class="form-control" aria-label="Coordenadas Barras" required>
                                                             </div>
                                                         </div>
                                                         <div class="form-row p-3">
                                                             <div class=" col-sm-12">
                                                                 <label class=" control-label">Caminho do arquivo de extensão .dss que contém as informações de conexão das linhas <span class="required">*</span></label>
-                                                                <input type="text" name="seo" class="form-control" placeholder="Caminho do arquivo que contém as informações de cada conexão do sistema." value=""
-                                                                    required />
+                                                                <input type="file" name="conexLinhas" class="form-control" aria-label="Coordenadas Barras" required>
                                                             </div>
                                                         </div>
                                                         <div class="form-row p-3">
                                                             <div class=" col-sm-12">
                                                                 <label class=" control-label">Caminho do arquivo com as curvas de cargas <span class="required">*</span></label>
-                                                                <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os pontos de cada curva de carga do sistema." value=""
-                                                                    required />
+                                                                <input type="file" name="curvasCargas" class="form-control" aria-label="Coordenadas Barras" required>
                                                             </div>
                                                         </div>
                                                         <div class="form-row p-3">
                                                             <div class=" col-sm-12">
                                                                 <label class=" control-label">Caminho do arquivo txt com o nome das curvas informadas no arquivo csv <span class="required">*</span></label>
-                                                                <input type="text" name="seo" class="form-control" placeholder="O arquivo, cujo caminho foi informado, contém os nomes das curvas de cargas que estão sendo informadas no arquivo csv, na ordem em que aparecem no arquivo." value=""
-                                                                    required />
+                                                                <input type="file" name="curvasName" class="form-control" aria-label="Coordenadas Barras" required>
                                                             </div>
                                                         </div>
                         
@@ -154,33 +150,47 @@
                                                         <div style="display:none">
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número de usinas PV: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número de usinas PV:</label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="numPV" class="form-control" placeholder="1" value="" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com o nome das barras cujas curvas de irradiância são fornecidas <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que são conhecidas as curvas de irradiância solar" value=""
-                                                                        required />
+                                                                    <input type="file" name="nomeBarrasIrrad" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com a irradiância das barras definidas no arquivo anterior:  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Curvas de irradiância das barras fornecidas no arquivo anterior" value=""
-                                                                        required />
+                                                                    <input type="file" name="irrad" class="form-control" aria-label="Coordenadas Barras">
                                                                 </div>
                                                             </div>
-                                                            <label style="margin-left:20px">Potência PV Discreta/Continua</label>
-                                                            <input type="checkbox" name="a" value="1">
-                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                            
+                                                            <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
-                                                                    <label class=" control-label">Caminho do arquivo csv com as informações de potência da usina PV:  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência de pico disponível para a usina PV" value=""
-                                                                        required />
+                                                                    <label>Potência PV Discreta/Continua</label>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potencia" id="flexRadioDefault1" value=true checked>
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                        Discreta
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potencia"  id="flexRadioDefault2" value=false >
+                                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Contínua
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                            <div class="form-row p-3" style="margin-left:20px" name="pot">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as informações de potência da usina PV: </label>
+                                                                    <input type="file" name="coordBarrasPV" class="form-control" aria-label="Coordenadas Barras">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -193,47 +203,45 @@
                                                         <div style="display:none">
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número de usinas eólicas: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número de usinas eólicas: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="numEolica" class="form-control" placeholder="1" value="" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com o nome das barras cujas curvas de vento são fornecidas: <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que são conhecidas as curvas de velocidade de vento incidente." value=""
-                                                                        required />
+                                                                    <input type="file" name="nomeBarrasCurvasVento" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com as velocidades de vento nas regiões das barras definidas no arquivo anterior  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Curvas de velocidade de vento das barras fornecidas no arquivo anterior" value=""
-                                                                        required />
+                                                                    <input type="file" name="velocidadeVento" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Potência Nominal da Turbina: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Potência Nominal da Turbina: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="potenciaNominal" class="form-control" placeholder="1" value="" />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número máximo de Turbinas: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número máximo de Turbinas: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="maxTurbina" class="form-control" placeholder="1" value=""  />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número mínimo de Turbinas: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número mínimo de Turbinas: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="minTurbina" class="form-control" placeholder="1" value=""  />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -247,41 +255,68 @@
                                                         <div style="display:none">
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número de bancos de bateria: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número de bancos de bateria: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="numBateria" class="form-control" placeholder="1" value=""  />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com o nome das barras de interesse para alocação da bateria: <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que o usuário tem interesse em alocar as baterias." value=""
-                                                                        required />
+                                                                    <input type="file" name="nomeBarraBateria" class="form-control" aria-label="Coordenadas Barras">
                                                                 </div>
                                                             </div>
-                                                            <label style="margin-left:20px">Potência Discreta/Continua</label>
-                                                            <input type="checkbox" name="a" value="1">
-                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label>Potência PV Manual/Otimizada</label>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaBateria" id="flexRadioDefault1" value=false>
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                            Manual
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaBateria"  id="flexRadioDefault2" value=true checked>
+                                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Otimizada
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" style="margin-left:20px" name="potBat">
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com a curva de carga/descarga de cada bateria:  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém as curvas de cargas de cada bateria que será alocada no sistema." value=""
-                                                                        required />
+                                                                    <input type="file" name="curvaCagaBateria" class="form-control" aria-label="Coordenadas Barras">
                                                                 </div>
                                                             </div>
-                                                            <label style="margin-left:20px">Potência Discreta/Continua</label>
-                                                            <input type="checkbox" name="a" value="1">
-                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label>Potência Discreta/Continua</label>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaBateriaDiscreta" id="flexRadioDefault1" value=true checked>
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                        Discreta
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaBateriaDiscreta"  id="flexRadioDefault2" value=false >
+                                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Contínua
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" style="margin-left:20px" name="potBatDis">
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com as informações de potência nominal (primeira coluna) e capacidade de carga (segunda coluna):  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência e carga disponíveis para a bateria." value=""
-                                                                        required />
+                                                                    <input type="file" name="potNominalBateria" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                                 <div class="form-row p-3" >
                                                                     <div class="form-group row ">
                                                                         <label class=" col-sm-6 col-form-label">Capacidade da bateria: <span class="required">*</span></label>
                                                                         <div class="col-sm-6">
-                                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                            <input type="number" name="capacidadeBat" class="form-control" placeholder="1" value=""/>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -299,34 +334,61 @@
                                                             <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com o nome das barras de interesse para alocação do gerador: <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="Nome de barras do sistema em que o usuário tem interesse em alocar geradores despacháveis." value=""
-                                                                        required />
+                                                                    <input type="file" name="nomeBarraGerador" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                             </div>
                                                             <div class="form-row p-3" >
                                                                 <div class="form-group row ">
-                                                                    <label class=" col-sm-6 col-form-label">Número de geradores despacháveis: <span class="required">*</span></label>
+                                                                    <label class=" col-sm-6 col-form-label">Número de geradores despacháveis: </label>
                                                                     <div class="col-sm-6">
-                                                                        <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                                        <input type="number" name="numGerador" class="form-control" placeholder="1" value=""  />
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <label style="margin-left:20px">Curva Otimizada/Manual</label>
-                                                            <input type="checkbox" name="a" value="1">
-                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                            <div class="form-row p-3" >
                                                                 <div class=" col-sm-12">
-                                                                    <label class=" control-label">Caminho do arquivo csv com as curvas de geração de cada gerador que será alocado <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém as curvas de carga de cada gerador que será alocado no sistema." value=""
-                                                                        required />
+                                                                    <label>Curva Otimizada/Manual</label>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaGeradorOtimizada" id="flexRadioDefault1" value=true checked>
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                            Otimizada
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaGeradorOtimizada"  id="flexRadioDefault2" value=false >
+                                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Manual
+                                                                        </label>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                            <label style="margin-left:20px">Potência Discreta-Contínua</label>
-                                                            <input type="checkbox" name="a" value="1">
-                                                            <div class="form-row p-3" style="margin-left:20px">
+                                                            <div class="form-row p-3" style="margin-left:20px" name="potGerOti">
+                                                                <div class=" col-sm-12">
+                                                                    <label class=" control-label">Caminho do arquivo csv com as curvas de geração de cada gerador que será alocado <span class="required">*</span></label>
+                                                                    <input type="file" name="curvasGerador" class="form-control" aria-label="Coordenadas Barras" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" >
+                                                                <div class=" col-sm-12">
+                                                                    <label>Potência PV Discreta/Continua</label>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaGeradorDiscreta" id="flexRadioDefault1" value=true checked>
+                                                                        <label class="form-check-label" for="flexRadioDefault1">
+                                                                        Discreta
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="potenciaGeradorDiscreta"  id="flexRadioDefault2" value=false >
+                                                                        <label class="form-check-label" for="flexRadioDefault2">
+                                                                          Contínua
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-row p-3" style="margin-left:20px" name="potGerDis">
                                                                 <div class=" col-sm-12">
                                                                     <label class=" control-label">Caminho do arquivo csv com as informações de potência disponíveis para os geradores:  <span class="required">*</span></label>
-                                                                    <input type="text" name="seo" class="form-control" placeholder="O arquivo cujo caminho foi informado contém os dados de potência nominal disponível para o gerador despachável." value=""
-                                                                        required />
+                                                                    <input type="file" name="infoPotGerador" class="form-control" aria-label="Coordenadas Barras" >
                                                                 </div>
                                                             </div>
                                                     </div>
@@ -347,25 +409,25 @@
                                                     <div class="form-group row ">
                                                         <label class=" col-sm-3 col-form-label">Número de indivíduos: <span class="required">*</span></label>
                                                         <div class="col-sm-6">
-                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                            <input type="number" name="numIndividuos" class="form-control" placeholder="1" value="" required />
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class=" col-sm-3 col-form-label">Tempo máximo de execução [s]: <span class="required">*</span></label>
                                                         <div class="col-sm-6">
-                                                            <input type="number" name="seo" class="form-control" placeholder="1,5" value="" required />
+                                                            <input type="number" name="tempoMax" class="form-control" placeholder="1,5" value="" required />
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class=" col-sm-3 col-form-label">Número máximo de iterações: <span class="required">*</span></label>
                                                         <div class="col-sm-6">
-                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                            <input type="number" name="numMaxIteracao" class="form-control" placeholder="1" value="" required />
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class=" col-sm-3 col-form-label">Número máximo de estagnações: <span class="required">*</span></label>
                                                         <div class="col-sm-6">
-                                                            <input type="number" name="seo" class="form-control" placeholder="1" value="" required />
+                                                            <input type="number" name="numMaxEstagnacao" class="form-control" placeholder="1" value="" required />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -418,6 +480,63 @@
         }).change()
     
     </script>
+    <script>
+        $('[name="potencia"]').change(function() {
+            if ($(this).val() == "true") {
+                console.log("entra aqui")
+                $('[name="pot"]').show();
+            }else{
+                console.log("entra aqui false")
+                $('[name="pot"]').hide();
+            }
+        });
+    </script>
+    <script>
+        $('[name="potenciaBateria"]').change(function() {
+            if ($(this).val() == "true") {
+                console.log("entra aqui")
+                $('[name="potBat"]').show();
+            }else{
+                console.log("entra aqui false")
+                $('[name="potBat"]').hide();
+            }
+        });
+    </script>
+    <script>
+        $('[name="potenciaBateriaDiscreta"]').change(function() {
+            if ($(this).val() == "true") {
+                console.log("entra aqui")
+                $('[name="potBatDis"]').show();
+            }else{
+                console.log("entra aqui false")
+                $('[name="potBatDis"]').hide();
+            }
+        });
+    </script>
+    <script>
+        $('[name="potenciaGeradorDiscreta"]').change(function() {
+            if ($(this).val() == "true") {
+                console.log("entra aqui")
+                $('[name="potGerDis"]').show();
+            }else{
+                console.log("entra aqui false")
+                $('[name="potGerDis"]').hide();
+            }
+        });
+    </script>
+
+    <script>
+        $('[name="potenciaGeradorOtimizada"]').change(function() {
+            if ($(this).val() == "true") {
+                console.log("entra aqui")
+                $('[name="potGerOti"]').show();
+            }else{
+                console.log("entra aqui false")
+                $('[name="potGerOti"]').hide();
+            }
+        });
+    </script>
+
 </body>
 
 </html>
